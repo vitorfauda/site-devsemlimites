@@ -191,7 +191,7 @@ export default function Landing() {
   return (
     <>
       {/* ================= HERO ================= */}
-      <section className="relative overflow-hidden min-h-[94vh] flex items-center">
+      <section className="relative overflow-hidden min-h-[85vh] md:min-h-[94vh] flex items-center py-12 sm:py-0">
         <div className="mesh-blob" style={{ width: 700, height: 700, top: '-10%', left: '-10%', background: '#22c55e' }} />
         <div className="mesh-blob" style={{ width: 600, height: 600, bottom: '-10%', right: '-5%', background: '#22d3ee' }} />
 
@@ -210,13 +210,13 @@ export default function Landing() {
               Lovable Ilimitado · Licença Vitalícia
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold leading-[1] mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1] mb-6">
               Use o Lovable<br />
               <span className="text-gradient">sem limite</span><br />
               de prompts
             </h1>
 
-            <p className="text-lg text-text-muted mb-8 leading-relaxed max-w-lg">
+            <p className="text-base sm:text-lg text-text-muted mb-8 leading-relaxed max-w-lg">
               A extensão que libera <span className="text-text-primary font-semibold">prompts ilimitados</span> no Lovable.dev.
               Sem consumir créditos da sua conta, sem mensalidade.
               Licença vitalícia por <span className="text-primary font-bold">R$ 147</span>.
@@ -257,7 +257,7 @@ export default function Landing() {
       </section>
 
       {/* ================= VIDEO DEMO ================= */}
-      <section id="video-demo" className="py-24 relative">
+      <section id="video-demo" className="section-pad relative">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -266,7 +266,7 @@ export default function Landing() {
             className="text-center max-w-2xl mx-auto mb-12"
           >
             <div className="text-sm font-semibold text-primary mb-3">DEMO</div>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">Veja funcionando em 60 segundos</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Veja funcionando em 60 segundos</h2>
             <p className="text-text-muted">Instalação, ativação e uso real no Lovable.</p>
           </motion.div>
 
@@ -297,7 +297,7 @@ export default function Landing() {
       </section>
 
       {/* ================= FEATURES ================= */}
-      <section id="features" className="py-24 relative">
+      <section id="features" className="section-pad relative">
         <div className="mesh-blob" style={{ width: 600, height: 600, top: '20%', left: '50%', background: '#22c55e', opacity: 0.08 }} />
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
@@ -307,7 +307,7 @@ export default function Landing() {
             className="text-center max-w-2xl mx-auto mb-16"
           >
             <div className="text-sm font-semibold text-primary mb-3">O QUE VOCÊ GANHA</div>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">Tudo que o PRO do Lovable te dá — sem pagar mensalidade</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Tudo que o PRO do Lovable te dá — sem pagar mensalidade</h2>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -332,7 +332,7 @@ export default function Landing() {
       </section>
 
       {/* ================= COMO FUNCIONA ================= */}
-      <section id="como-funciona" className="py-24 relative">
+      <section id="como-funciona" className="section-pad relative">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -341,7 +341,7 @@ export default function Landing() {
             className="text-center max-w-2xl mx-auto mb-16"
           >
             <div className="text-sm font-semibold text-primary mb-3">COMO FUNCIONA</div>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">4 passos. 2 minutos. Pronto.</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">4 passos. 2 minutos. Pronto.</h2>
             <p className="text-text-muted">Do pagamento ao primeiro prompt ilimitado.</p>
           </motion.div>
 
@@ -365,7 +365,7 @@ export default function Landing() {
       </section>
 
       {/* ================= COMPARATIVO ================= */}
-      <section className="py-24">
+      <section className="section-pad">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -374,7 +374,7 @@ export default function Landing() {
             className="text-center mb-12"
           >
             <div className="text-sm font-semibold text-primary mb-3">COMPARATIVO</div>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">Por que não pagar PRO mensal?</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Por que não pagar PRO mensal?</h2>
             <p className="text-text-muted">Faz a conta você mesmo.</p>
           </motion.div>
 
@@ -384,7 +384,7 @@ export default function Landing() {
             viewport={{ once: true }}
             className="holo-card holo-permanent overflow-hidden"
           >
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto -mx-4 sm:mx-0">
               <table className="w-full">
                 <thead>
                   <tr className="border-b" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
@@ -415,7 +415,7 @@ export default function Landing() {
       </section>
 
       {/* ================= PLANOS ================= */}
-      <section id="planos" className="py-24 relative">
+      <section id="planos" className="section-pad relative">
         <div className="mesh-blob" style={{ width: 700, height: 700, top: '30%', left: '40%', background: '#22c55e', opacity: 0.08 }} />
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
@@ -425,7 +425,7 @@ export default function Landing() {
             className="text-center max-w-2xl mx-auto mb-16"
           >
             <div className="text-sm font-semibold text-primary mb-3">PLANOS</div>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">Escolha seu ritmo</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Escolha seu ritmo</h2>
             <p className="text-text-muted">3 formas de começar. Do teste de 7 dias à licença vitalícia.</p>
           </motion.div>
 
@@ -489,7 +489,7 @@ export default function Landing() {
       </section>
 
       {/* ================= DEPOIMENTOS ================= */}
-      <section id="depoimentos" className="py-24">
+      <section id="depoimentos" className="section-pad">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -498,7 +498,7 @@ export default function Landing() {
             className="text-center max-w-2xl mx-auto mb-16"
           >
             <div className="text-sm font-semibold text-primary mb-3">DEPOIMENTOS</div>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">Quem já usa</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Quem já usa</h2>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-5">
@@ -531,7 +531,7 @@ export default function Landing() {
       </section>
 
       {/* ================= FAQ ================= */}
-      <section id="faq" className="py-24">
+      <section id="faq" className="section-pad">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -540,7 +540,7 @@ export default function Landing() {
             className="text-center mb-12"
           >
             <div className="text-sm font-semibold text-primary mb-3">FAQ</div>
-            <h2 className="text-4xl sm:text-5xl font-bold">Dúvidas frequentes</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">Dúvidas frequentes</h2>
           </motion.div>
 
           <div className="space-y-3">
@@ -567,7 +567,7 @@ export default function Landing() {
       </section>
 
       {/* ================= CTA FINAL ================= */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="section-pad relative overflow-hidden">
         <div className="mesh-blob" style={{ width: 800, height: 800, top: '-20%', left: '20%', background: '#22c55e', opacity: 0.12 }} />
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
@@ -579,7 +579,7 @@ export default function Landing() {
             <div className="h-16 w-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mx-auto mb-5">
               <Rocket size={28} className="text-primary" />
             </div>
-            <h2 className="text-4xl sm:text-6xl font-display font-bold mb-4">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold mb-4">
               Pronto pra <span className="text-gradient">soltar a criatividade</span>?
             </h2>
             <p className="text-lg text-text-muted mb-8 max-w-xl mx-auto">
