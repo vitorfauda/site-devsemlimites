@@ -17,49 +17,53 @@ const plans = [
     label: '7 dias',
     icon: Zap,
     color: '#22d3ee',
-    price: 47,
+    price: 67,
     old: null,
     desc: 'Pra testar',
+    period: '/única',
     features: [
       'Prompts ilimitados',
       'Não consome créditos',
-      'Uso em 1 dispositivo',
+      'Uso em até 3 dispositivos',
       'Suporte via WhatsApp',
     ],
     popular: false,
   },
   {
-    code: '30dias',
-    label: '30 dias',
+    code: 'monthly',
+    label: 'Mensal',
     icon: TrendingUp,
     color: '#fbbf24',
     price: 97,
     old: null,
     desc: 'Mais escolhido',
+    period: '/mês',
     features: [
       'Prompts ilimitados',
       'Não consome créditos',
-      'Uso em 1 dispositivo',
+      'Uso em até 3 dispositivos',
       'Suporte prioritário',
       'Atualizações automáticas',
+      'Renovação automática',
     ],
     popular: true,
   },
   {
-    code: 'vitalicio',
-    label: 'Vitalícia',
+    code: 'yearly',
+    label: 'Anual',
     icon: InfinityIcon,
     color: '#22c55e',
     price: 147,
-    old: 197,
-    desc: 'Pagamento único',
+    old: 397,
+    desc: '🔥 Promo de lançamento',
+    period: '/ano',
     features: [
       'Prompts ilimitados',
       'Não consome créditos',
-      'Uso em 1 dispositivo',
+      'Uso em até 3 dispositivos',
       'Suporte VIP',
-      'Todas as atualizações futuras',
-      'Sem mensalidade',
+      'Todas as atualizações',
+      'Economia: ~R$ 1.017/ano vs mensal',
     ],
     popular: false,
   },
@@ -168,8 +172,8 @@ const faqs = [
     a: 'Depois do PIX confirmado (leva 5 segundos), enviamos automaticamente via WhatsApp: sua chave de licença + link pra baixar a extensão + vídeo tutorial.',
   },
   {
-    q: 'A licença vitalícia é vitalícia mesmo?',
-    a: 'Sim. Pagamento único de R$ 147. Enquanto o Lovable existir e nós mantivermos a extensão atualizada, você usa. Sem mensalidade, sem renovação.',
+    q: 'O plano Anual de R$ 147 é promo mesmo?',
+    a: 'É. Promo de lançamento. Valor cheio depois é R$ 397/ano. Quem pega na promo paga R$ 147 só no primeiro ano — renovação no preço cheio com 1 mês de aviso prévio.',
   },
   {
     q: 'E se o Lovable bloquear?',
@@ -181,7 +185,11 @@ const faqs = [
   },
   {
     q: 'Posso testar antes de comprar?',
-    a: 'Temos o plano de 7 dias por R$ 47 como "teste estendido". Se gostar (vai gostar), depois só upgrade pra vitalício.',
+    a: 'Temos o plano de 7 dias por R$ 67 como "teste estendido". Se gostar (vai gostar), depois só upgrade pra mensal ou anual.',
+  },
+  {
+    q: 'Quero indicar pra outras pessoas e ganhar comissão. Como faço?',
+    a: 'Temos programa de revendas com comissão de até 70% por venda. Entrada única de R$ 9,90, sem mensalidade. Olha em rev.devsemlimites.site/seja-revenda.',
   },
 ];
 
@@ -527,6 +535,46 @@ export default function Landing() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ================= REVENDA CTA ================= */}
+      <section id="revenda" className="section-pad relative">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-3xl bg-gradient-to-br from-primary/15 to-accent-cyan/10 border border-primary/30 p-8 sm:p-10 text-center relative overflow-hidden"
+          >
+            <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-primary/20 blur-3xl" />
+            <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-accent-cyan/20 blur-3xl" />
+
+            <div className="relative">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/15 border border-primary/30 text-xs font-semibold text-primary uppercase tracking-wider mb-5">
+                <Sparkles size={12} /> Programa de Revendas
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+                Quer ganhar <span className="bg-gradient-to-r from-primary to-accent-cyan bg-clip-text text-transparent">comissão recorrente</span>?
+              </h2>
+              <p className="text-base sm:text-lg text-text-muted mb-6 max-w-2xl mx-auto">
+                Indica DSL e ganha até <strong className="text-primary">70% de comissão</strong> em cada cliente.
+                Eles pagam todo mês. Você recebe todo mês.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
+                <a
+                  href="https://rev.devsemlimites.site/seja-revenda"
+                  target="_blank" rel="noreferrer"
+                  className="cta-neon inline-flex items-center justify-center gap-2 !py-3 !px-6 text-base"
+                >
+                  Quero ser revenda <ArrowRight size={18} />
+                </a>
+              </div>
+              <div className="text-xs text-text-dim">
+                Entrada única de <strong className="text-text-primary">R$ 9,90</strong> · sem mensalidade · saca pra qualquer banco
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

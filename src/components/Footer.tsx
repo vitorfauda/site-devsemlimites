@@ -7,8 +7,8 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 font-display font-bold text-lg mb-3">
-              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-accent-cyan flex items-center justify-center">
-                <span className="text-void font-black text-sm">D</span>
+              <div className="h-8 w-8 rounded-lg overflow-hidden">
+                <img src="/logo.png" alt="DSL" className="h-full w-full object-contain" />
               </div>
               Dev Sem Limites
             </div>
@@ -64,8 +64,8 @@ export function Footer() {
         <div className="mt-10 pt-6 border-t flex flex-col sm:flex-row justify-between gap-4 text-xs text-text-dim" style={{ borderColor: 'rgba(255,255,255,0.05)' }}>
           <p>© {new Date().getFullYear()} Dev Sem Limites. Todos os direitos reservados.</p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-text-muted">Termos</a>
-            <a href="#" className="hover:text-text-muted">Privacidade</a>
+            <a href="/termos" className="hover:text-text-muted">Termos de Uso</a>
+            <a href="/privacidade" className="hover:text-text-muted">Privacidade · LGPD</a>
           </div>
         </div>
       </div>
