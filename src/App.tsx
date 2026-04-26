@@ -8,10 +8,9 @@ import Privacidade from '@/pages/Privacidade';
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="relative min-h-screen flex flex-col">
-        <div className="grain" />
+      <div className="min-h-screen flex flex-col bg-[var(--color-bg)] text-[var(--color-text)]">
         <Header />
-        <main className="flex-1 relative z-[2]">
+        <main className="flex-1">
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/termos" element={<Termos />} />
