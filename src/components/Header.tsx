@@ -33,9 +33,6 @@ export function Header() {
         )}
 
         <div className="flex items-center gap-2">
-          <ButtonLink href="https://pay.devsemlimites.site" variant="ghost" size="sm">
-            Entrar
-          </ButtonLink>
           <ButtonLink href="https://pay.devsemlimites.site" size="sm">
             Comprar →
           </ButtonLink>
